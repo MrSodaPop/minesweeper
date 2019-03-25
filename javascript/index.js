@@ -12,9 +12,6 @@ $(document).ready(function(){
       if (!!g.over) {
           return;
       }
-      if (key.key === 'Enter') {
-          showBombs();
-      };
       if (key.key === ' ') {
           flag();
       }
@@ -212,17 +209,6 @@ var generateGameData = function(tiles) {
       bC: bC
   }
   bombCount();
-}
-
-var showBombs = function() {
-  for (let i = 0; i < 20; i++) {
-      for (let j = 0; j < 20; j++) {
-          if (!!g.tiles[i][j].b) {
-              $('#' + i + '-' + j).css('background-color','black');
-              //g.tiles[i][j].a = 1;
-          }
-      }
-  }
 }
 
 var g;
