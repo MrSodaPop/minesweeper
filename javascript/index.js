@@ -79,6 +79,16 @@ var checkWin = function() {
           }
       }
   }
+  for (let i = 0; i < 20; i++) {
+    for (let j = 0; j < 20; j++) {
+      if (!!!g.tiles[i][j].a && !!!g.tiles[i][j].b){
+        $('#' + i + '-' + j).css('background-color', 'slateblue');
+      }
+      if (g.tiles[i][j] > 0 && !!!g.tiles[i][j].b) {
+        $('#' + x + '-' + y).append("<p id=\'p\'>" + g.tiles[x][y].c + "</p>");
+      }
+    }
+  }
   $('.instructions').html('<strong>You Win!</strong>');
   $('.instructions').css('font-size','4vw');
   $('#' + g.sTile.x + '-' + g.sTile.y).css('background-color','red');
