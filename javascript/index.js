@@ -65,7 +65,6 @@ var flag = function() {
           $('#' + g.sTile.x + "-" + g.sTile.y).css('background-color','darkslategrey');
           g.fC--;
       }
-      console.log(g.fC,g.bC)
       if (g.fC === g.bC) {
           checkWin();
       }
@@ -179,7 +178,6 @@ var generateGameArea = function() {
           };
       }
   }
-  console.log('Game area generated');
   generateGameData(tiles);
 }
 
