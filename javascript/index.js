@@ -140,6 +140,8 @@ var endGame = function() {
       for (let j = 0; j < 20; j++) {
           if (!!g.tiles[i][j].b) {
               $('#' + i + "-" + j).css('background-color','black');
+              $('.instructions').html('You Lose!');
+              $('.insturctions').css('font-size','4vw');
           }
       }
   }
